@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #3399FF; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_train.Product_Management">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="574.0" prefWidth="313.0" style="-fx-background-color: red; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="75.0" layoutY="29.0" text="Product Management" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="44.0" fitWidth="41.0" layoutX="20.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/Cake.jpg" />
+               </image></ImageView>
+            <Line endX="100.0" layoutX="131.0" layoutY="60.0" startX="-100.0" stroke="WHITE" />
+            <TextField fx:id="txt_Id" layoutX="58.0" layoutY="104.0" prefHeight="25.0" prefWidth="184.0" promptText="ID" />
+            <Label layoutX="60.0" layoutY="76.0" text="Product Id" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_name" layoutX="58.0" layoutY="174.0" prefHeight="25.0" prefWidth="184.0" promptText="Name" />
+            <Label layoutX="58.0" layoutY="146.0" text="Product Name" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_Price" layoutX="58.0" layoutY="254.0" prefHeight="25.0" prefWidth="184.0" promptText="Price" />
+            <Label layoutX="58.0" layoutY="226.0" text="Product Price" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="Add_Button" layoutX="52.0" layoutY="322.0" mnemonicParsing="false" onAction="#EventHandler" prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: #3399FF;" text="Add" textFill="WHITE" />
+            <Button fx:id="Update_Button" graphicTextGap="8.0" layoutX="53.0" layoutY="376.0" mnemonicParsing="false" onAction="#EventHandler" prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: #3399FF;" text="Update" textFill="WHITE" />
+            <Button fx:id="Delete_Button" layoutX="52.0" layoutY="424.0" mnemonicParsing="false" onAction="#EventHandler" prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: #3399FF;" text="Delete" textFill="WHITE" />
+            <ImageView fitHeight="28.0" fitWidth="38.0" layoutX="20.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="38.0" layoutX="20.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="38.0" layoutX="10.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/price_tag_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="38.0" layoutX="74.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/Update_icon.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="111.0" layoutY="489.0" prefHeight="35.0" prefWidth="313.0" style="-fx-background-color: #3399FF;" text="Kishore bakery" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="Product_Table" layoutX="479.0" layoutY="69.0" prefHeight="399.0" prefWidth="393.0">
+        <columns>
+          <TableColumn fx:id="Table_Product_Id" prefWidth="100.0" text="Product ID" />
+          <TableColumn fx:id="Table_Product_Name" prefWidth="185.0" text="Product Name" />
+            <TableColumn fx:id="Table_Product_Price" prefWidth="107.0" text="Product Price " />
+        </columns>
+      </TableView>
+      <Button fx:id="backToBill" layoutX="847.0" layoutY="534.0" onAction="#EventHandler" prefHeight="35.0" prefWidth="111.0" style="-fx-background-color: red;" text="Back to Bill" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="CloseImage" fitHeight="26.0" fitWidth="31.0" layoutX="961.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/close.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="MinimizeImage" fitHeight="26.0" fitWidth="31.0" layoutX="931.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/minus.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

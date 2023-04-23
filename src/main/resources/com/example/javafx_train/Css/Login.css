@@ -1,0 +1,5 @@
+.root{
+-fx-background-image:url("Main.jpg");
+    -fx-border-image-repeat: stretch;
+    -fx-background-color: null !important;
+}
